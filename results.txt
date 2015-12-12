@@ -1,0 +1,12 @@
+Tie rates for the different systems. Clearly, removing multipliers increases the likelihood of a tie.
+
+Weighted:
+100000 trials.
+697.0 ties
+0.00697 tie rate.
+
+Unweighted:
+100000 trials.
+74427.0 ties
+0.74427 tie rate.
+
