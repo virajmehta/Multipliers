@@ -59,13 +59,13 @@ def simYear(weighted):
     ''' This will simulate a single year under the current system or new one. Returns true if there's a tie, false if not.
     One important assumption in this step is that there are realistically only about 10 students/year who
     are going to be competing for the valedictorianship. In our other system, this will be 15 to account for the increased number of students that could contend'''
-    yearGrades = {0}
+    valGPA = 0
     for student in range(10 if weighted else 10):
         grade = simulateOneStudentWeighted() if weighted else simulateOneStudentUnweighted()
-        if grade in yearGrades:
+        if grade == valGPA:
             return True
-        else:
-            yearGrades.add(grade)
+        elif grade > valGPA:
+            valGPA = grade
     return False
 
 def simTrialsUnweighted():
